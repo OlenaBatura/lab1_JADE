@@ -23,8 +23,6 @@
 
 package jade.domain;
 
-import jade.util.leap.*;
-
 import jade.domain.FIPAAgentManagement.*;
 import jade.core.Agent;
 import jade.core.AID;
@@ -35,8 +33,11 @@ import jade.lang.acl.ISO8601;
 
 import jade.content.lang.sl.SimpleSLTokenizer;
 import jade.content.lang.sl.SL0Vocabulary;
+import jade.util.leap.ArrayList;
+import jade.util.leap.Iterator;
+import jade.util.leap.List;
 
-import java.util.Date;
+import java.util.*;
 
 /**
  * This class provides a set of static methods to communicate with
@@ -393,7 +394,7 @@ public class DFService extends FIPAService {
 	 @exception FIPAException  
 	 @see #search(Agent a, AID dfName, DFAgentDescription dfd, SearchConstraints constraints) 
 	 **/
-	public static DFAgentDescription[] search(Agent a, DFAgentDescription dfd) throws FIPAException {
+	public static java.util.ArrayList<DFAgentDescription> search(Agent a, DFAgentDescription dfd) throws FIPAException {
 		return search(a,null,dfd,null);
 	}
 	

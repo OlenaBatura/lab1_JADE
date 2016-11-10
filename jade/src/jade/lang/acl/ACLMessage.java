@@ -78,7 +78,7 @@ import jade.domain.FIPAAgentManagement.Envelope;
  * @see <a href=http://www.fipa.org/specs/fipa00061/XC00061D.html>FIPA Spec</a>
  */
 //#MIDP_EXCLUDE_BEGIN 
-public class ACLMessage implements Cloneable, Serializable {
+public class ACLMessage extends jade.domain.introspection.ACLMessage implements Cloneable, Serializable {
 //#MIDP_EXCLUDE_END 
 /*#MIDP_INCLUDE_BEGIN 
 public class ACLMessage implements Serializable {
@@ -346,7 +346,7 @@ public class ACLMessage implements Serializable {
 	/**
 	 Adds a value to <code>:receiver</code> slot. <em><b>Warning:</b>
 	 no checks are made to validate the slot value.</em>
-	 @param r The value to add to the slot value set.
+	 * @param r The value to add to the slot value set.
 	 */
 	public void addReceiver(AID r) {
 		if(r != null) {

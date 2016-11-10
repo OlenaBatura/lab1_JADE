@@ -26,10 +26,7 @@ package jade.content;
 
 import jade.lang.acl.ACLMessage;
 import jade.core.AID;
-import jade.util.leap.List;
 import jade.util.leap.Iterator;
-import jade.content.abs.*;
-import jade.content.onto.*;
 
 /** 
  * Utility class that allow using an <code>ACLMessage</code> object
@@ -119,6 +116,7 @@ public class OntoACLMessage extends ACLMessage implements AgentAction {
 	/**
 	 * This method is redefined so that the receiver AID is automatically
 	 * wrapped into an OntoAID
+	 * @param aid
 	 */
 	public void addReceiver(AID aid) {
 		super.addReceiver(OntoAID.wrap(aid));
